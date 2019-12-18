@@ -14,3 +14,52 @@
 .main-nav .logo {
     justify-self: center;
 }
+
+.main-nav li a {
+    padding: .4rem;
+}
+
+/* Home Articles */
+
+#home-articles .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#home-articles .card:first-child,
+#home-articles .card:last-child  {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+}
+
+@media(max-width: 600px) {
+    /* Stack Grid Items */
+    #showcase .showcase-container,
+    #home-articles .articles-container,
+    #main-footer .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    #main-footer .footer-container > *:last-child {
+        grid-column: 1;
+    }
+
+    #main-footer .footer-container > * {
+        padding-bottom: 2rem;
+    }
+
+    /* Asides */
+    .page-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+        grid-gap: 1.5rem;
+    }
+    
+    .page-container > *:first-child {
+        grid-column: 1;
+    }
+
+    .big-head {
+        font-size: 2rem;
+    }
+}
