@@ -1,7 +1,7 @@
 :root {
     --primary-color: #c72727;
     --secondary-color: #f99500;
-    --light-color: #ddd;
+    --light-color: #eee;
     --dark-color: #333;
     --max-width: 1100px;
 }
@@ -24,6 +24,10 @@ body {
     background: var(--light-color);
 }
 
+p {
+    margin: .5rem 0;
+}
+
 a {
     color: var(--dark-color);
     text-decoration: none;
@@ -41,6 +45,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Staatliches', cursive;
     line-height: 1.3;
     margin-bottom: .55rem;
+}
+
+.big-head {
+    font-size: 3rem;
 }
 
 .container {
@@ -127,6 +135,27 @@ h1, h2, h3, h4, h5, h6 {
 .p-1 { padding: 1.5rem }
 .p-2 { padding: 2rem }
 .p-3 { padding: 3rem }
+
+.list li {
+    width: 90%;
+    padding: .5rem 0;
+    border-bottom: dotted 1px #555;
+}
+
+.list li a:hover {
+    color: var(--primary-color) !important;
+}
+
+.page-container {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    margin: 2rem 0;
+    grid-gap: 1.5rem;
+}
+
+.page-container > *:first-child {
+    grid-row: 1 / span 6;
+}
 
 /* Navigation */
 .main-nav {
@@ -219,7 +248,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-gap: 1rem;
 }
 
-.card:first-child {
+#home-articles .card:first-child {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
@@ -227,10 +256,61 @@ h1, h2, h3, h4, h5, h6 {
     grid-column: 1 / span 2;
 }
 
-.card:last-child {
+#home-articles .card:last-child {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     align-items: center;
     grid-column: 2 / span 2;
 }
+
+/* Article */
+
+#article .meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #eee;
+    padding: .5rem;
+}
+
+#article .category {
+    margin-top: .6rem;
+}
+
+/* Footer */
+
+#main-footer {
+    background: var(--dark-color);
+    color: #fff;
+    </h3>
+}
+
+#main-footer img {
+    width: 150px;
+}
+
+#main-footer a {
+    color: #fff;
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+}
+
+#main-footer .footer-container > *:last-child {
+    background: #444;
+    grid-column: 1 / span 4;
+    text-align: center;
+    padding: .5rem;
+    font-size: .75rem;
+}
+
+#main-footer .footer-container input {
+    width: 90%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+}
+
